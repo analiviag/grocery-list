@@ -13,6 +13,7 @@ import React, { useState, useMemo } from "react";
 import ShoppingListItem from "./src/components/ShoppingListItem";
 import { Item } from "./src/components/ShoppingListItemType.types";
 import { SafeAreaView } from "react-native-safe-area-context";
+import ConfettiCannon from "react-native-confetti-cannon";
 
 export default function App() {
   const [item, setItem] = useState<string>("");
@@ -51,6 +52,13 @@ export default function App() {
     );
   }, [items]);
 
+  const allTasksCompleted = useMemo(() => {
+    if (items.length === 0) {
+      return false;
+    }
+    return items.every((item) => item.isCompleted);
+  }, [items]);
+
   return (
     <>
       <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
@@ -85,6 +93,14 @@ export default function App() {
               keyExtractor={(item) => item.id}
             />
           </View>
+          {allTasksCompleted && (
+            <ConfettiCannon
+              count={200}
+              origin={{ x: -10, y: 0 }}
+              autoStart={true}
+              fadeOut={true}
+            />
+          )}
         </SafeAreaView>
       </TouchableWithoutFeedback>
     </>
