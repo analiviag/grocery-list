@@ -10,3 +10,7 @@ export const CheckCircleIcon = () => (
 export const CircleIcon = () => (
   <Text style={{ fontSize: 20, color: "#9CA3AF", marginRight: 15 }}>⚪️</Text>
 );
+
+export const SparklesIcon = () => <Text style={{ fontSize: 24 }}>✨</Text>;
+
+export const BroomIcon = () => <Text style={{ fontSize: 24 }}>🧹</Text>;
