@@ -14,3 +14,7 @@ export const CircleIcon = () => (
 export const SparklesIcon = () => <Text style={{ fontSize: 24 }}>✨</Text>;
 
 export const BroomIcon = () => <Text style={{ fontSize: 24 }}>🧹</Text>;
+
+export const BellIcon = () => <Text style={{ fontSize: 24 }}>🔔</Text>;
+
+export const ScheduleIcon = () => <Text style={{ fontSize: 24 }}>⏰</Text>;

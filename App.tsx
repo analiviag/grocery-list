@@ -19,7 +19,9 @@ import ConfettiCannon from "react-native-confetti-cannon";
 import Constants from "expo-constants";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { generateRecipeFromIngredients } from "./src/services/aiService";
-import { SparklesIcon, BroomIcon } from "./src/components/Icons";
+import { SparklesIcon, BroomIcon, ScheduleIcon } from "./src/components/Icons";
+import { requestNotificationPermissionsAsync } from "./src/services/notificationService";
+import * as Notifications from "expo-notifications";
 
 const STORAGE_KEY = "@grocery_list_items";
 const GROQ_API_KEY = Constants.expoConfig?.extra?.groqApiKey;
@@ -143,6 +145,33 @@ export default function App() {
     }
   };
 
+  const handleScheduleNotification = async () => {
+    const permissionStatus = await requestNotificationPermissionsAsync();
+
+    if (permissionStatus === "granted") {
+      await Notifications.scheduleNotificationAsync({
+        content: {
+          title: "🛒 Shopping Reminder!",
+          body: "Don't forget to pick up groceries.",
+          sound: true,
+        },
+        // @ts-ignore - This comment tells TypeScript to ignore the incorrect error on the next line.
+        trigger: {
+          type: "timeInterval",
+          seconds: 5,
+          repeats: false,
+        },
+      });
+
+      Alert.alert("Reminder Scheduled", "You will be reminded in 5 seconds.");
+    } else {
+      Alert.alert(
+        "Permissions Required",
+        "Please enable notifications in your device settings to use this feature."
+      );
+    }
+  };
+
   const sortedItems = useMemo(() => {
     return [...items].sort(
       (a, b) => Number(a.isCompleted) - Number(b.isCompleted)
@@ -203,6 +232,12 @@ export default function App() {
               <SparklesIcon />
             )}
           </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.footerButton}
+            onPress={handleScheduleNotification}
+          >
+            <ScheduleIcon />
+          </TouchableOpacity>
         </View>
 
         {allTasksCompleted && (
@@ -221,7 +256,13 @@ export default function App() {
 const styles = StyleSheet.create({
   safeArea: { flex: 1, backgroundColor: "#111827" },
   container: { flex: 1, paddingHorizontal: 20, paddingTop: 15 },
-  title: { fontSize: 32, fontWeight: "bold", color: "#FFF", marginBottom: 20 },
+  title: {
+    fontSize: 32,
+    fontWeight: "bold",
+    color: "#FFF",
+    marginBottom: 20,
+    marginTop: 50,
+  },
   inputContainer: { flexDirection: "row", marginBottom: 20 },
   input: {
     flex: 1,
