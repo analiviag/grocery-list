@@ -19,6 +19,10 @@ This application is more than just a simple notetaker. It's a comprehensive tool
 
 ## 📸 Screenshots
 
+|                                    Add Items                                     |                                     Completed Items                                      |                                     AI Recipe                                     |
+| :------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------: |
+| ![Main app screen showing a list of items](./assets/screenshots/main-screen.png) | ![App screen with completed items crossed out](./assets/screenshots/completed-items.png) | ![Alert showing an AI-generated recipe](./assets/screenshots/ai-recipe-alert.png) |
+
 ## 🛠️ Tech Stack
 
 - **Framework:** React Native with Expo
