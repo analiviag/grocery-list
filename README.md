@@ -21,14 +21,11 @@ This application is more than just a simple notetaker. It's a comprehensive tool
 
 Here's a look at the app in action:
 
-**Main Screen & Adding Items**
-![Main app screen showing a list of items](./assets/screenshots/main-screen.png)
+<img width="1242" height="2688" alt="main-screen" src="https://github.com/user-attachments/assets/ea74ef82-8d28-4f3a-beff-fe56c3cd5513" />
 
-**Completed Items & Sorting**
-![App screen with completed items crossed out](./assets/screenshots/completed-items.png)
+<img width="1242" height="2688" alt="completed-items" src="https://github.com/user-attachments/assets/bbed2954-ba1b-4115-9da5-9698347f23fa" />
 
-**AI Recipe Generation**
-![Alert showing an AI-generated recipe](./assets/screenshots/ai-recipe-alert.png)
+<img width="1242" height="2688" alt="ai-recipe-alert" src="https://github.com/user-attachments/assets/6c3dd9d4-6e9b-4957-97a3-e719003ea690" />
 
 ## 🛠️ Tech Stack
 
