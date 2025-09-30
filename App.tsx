@@ -282,7 +282,7 @@ const styles = StyleSheet.create({
   footer: {
     flexDirection: "row",
     justifyContent: "space-around",
-    paddingVertical: 15,
+    paddingVertical: 25,
     paddingHorizontal: 20,
     borderTopWidth: 1,
     borderTopColor: "#374151",
