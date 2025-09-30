@@ -21,11 +21,16 @@ This application is more than just a simple notetaker. It's a comprehensive tool
 
 Here's a look at the app in action:
 
-<img width="1242" height="2688" alt="main-screen" src="https://github.com/user-attachments/assets/ea74ef82-8d28-4f3a-beff-fe56c3cd5513" />
+<img width="242" height="688" alt="main-screen" src="https://github.com/user-attachments/assets/ea74ef82-8d28-4f3a-beff-fe56c3cd5513" />
 
-<img width="1242" height="2688" alt="completed-items" src="https://github.com/user-attachments/assets/bbed2954-ba1b-4115-9da5-9698347f23fa" />
 
-<img width="1242" height="2688" alt="ai-recipe-alert" src="https://github.com/user-attachments/assets/6c3dd9d4-6e9b-4957-97a3-e719003ea690" />
+<img width="242" height="688" alt="completed-items" src="https://github.com/user-attachments/assets/bbed2954-ba1b-4115-9da5-9698347f23fa" />
+
+
+<img width="242" height="688" alt="ai-recipe-alert" src="https://github.com/user-attachments/assets/6c3dd9d4-6e9b-4957-97a3-e719003ea690" />
+
+<img width="242" height="688" alt="notification" src="https://github.com/user-attachments/assets/e4410c2f-718a-4336-8d5d-3bfb41c3c3de" />
+
 
 ## 🛠️ Tech Stack
 
