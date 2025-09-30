@@ -19,9 +19,16 @@ This application is more than just a simple notetaker. It's a comprehensive tool
 
 ## 📸 Screenshots
 
-|                                    Add Items                                     |                                     Completed Items                                      |                                     AI Recipe                                     |
-| :------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------: |
-| ![Main app screen showing a list of items](./assets/screenshots/main-screen.png) | ![App screen with completed items crossed out](./assets/screenshots/completed-items.png) | ![Alert showing an AI-generated recipe](./assets/screenshots/ai-recipe-alert.png) |
+Here's a look at the app in action:
+
+**Main Screen & Adding Items**
+![Main app screen showing a list of items](./assets/screenshots/main-screen.png)
+
+**Completed Items & Sorting**
+![App screen with completed items crossed out](./assets/screenshots/completed-items.png)
+
+**AI Recipe Generation**
+![Alert showing an AI-generated recipe](./assets/screenshots/ai-recipe-alert.png)
 
 ## 🛠️ Tech Stack
 
